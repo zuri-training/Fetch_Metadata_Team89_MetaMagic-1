@@ -280,29 +280,30 @@ color: #196DDC;
     font-size: 16px;
 }
 #item_headings{
-    
+   
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     background: #FEE5D2;
     padding: 24px;
+}
+#item_headings>div{
+    width: 100%;
 }
 #items{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     padding-right: 24px;
     padding-left: 24px;
     border-bottom: 1px solid #B2CEF3;
     background: #FFFFFF;
     text-align: left;
-    align-items: center;
     color: #0D376E;
 }
 
 #checkbox>input{
     width: 24px;
     height: 24px;
+    display: none;
     
 }
 #items:last-child{
@@ -426,10 +427,11 @@ color: #196DDC;
     #export{
     grid-area: export;
     }
+    #item_headings>#dateuploaded{
+        display: none;
+      }
+      #item_headings>#filesize{
+        display: none;
+      }
   }
-  #item_headings>#dateuploaded{
-    display: none;
-  }
-  #item_headings>#filesize{
-    display: none;
-  }
+  
