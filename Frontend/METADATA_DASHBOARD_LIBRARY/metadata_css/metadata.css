@@ -287,9 +287,6 @@ color: #196DDC;
     background: #FEE5D2;
     padding: 24px;
 }
-#item_headings>div{
-    width: 20%;
-}
 #items{
     display: flex;
     flex-direction: row;
@@ -349,6 +346,10 @@ color: #196DDC;
 #heading{
     color: #196DDC;
 }
+
+
+
+/* moile view*/
 @media screen and (max-width: 600px) {
     body{
         width: 100%;
@@ -392,4 +393,43 @@ color: #196DDC;
     #export>#table_setting{
         display: block;
     }
+    #filesize{
+        grid-area: filesize;
+        font-size: 12px;
+    }
+    #dateuploaded{
+      grid-area: upload;
+      font-size: 12px;
+    }
+    #checkbox{
+        display: none;
+    }
+    #filename{
+        grid-area: filename;
+        
+    }
+
+    #items{
+        display: grid;
+        grid-template-areas:
+        'filename filename export '
+        'upload filesize   export';
+        grid-gap: 1px;
+        justify-items: start;
+    }
+    #items>div{
+        width: auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 5px;
+    }
+    #export{
+    grid-area: export;
+    }
+  }
+  #item_headings>#dateuploaded{
+    display: none;
+  }
+  #item_headings>#filesize{
+    display: none;
   }
